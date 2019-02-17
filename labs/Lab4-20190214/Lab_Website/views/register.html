@@ -1,0 +1,137 @@
+<!-- Registration Page -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<title>Register Page</title>
+	<link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon' />
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	 crossorigin="anonymous">
+	<link href="../resources/css/my_style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<img src="../resources/img/beproudcapaabanner.jpg" class="img-fluid" alt="Registration Page Banner for CU Football">
+	<br>
+	<br>
+	<div class="container">
+		<form class="form-horizontal" action='home.html' method="POST">
+			<fieldset>
+				<div id="legend">
+					<legend class="">Register</legend>
+				</div>
+				<div class="control-group">
+					<!-- Username -->
+					<label class="control-label" for="username">First Name</label>
+					<div class="controls">
+						<input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+					</div>
+				</div>
+				<div class="control-group">
+					<!-- Username -->
+					<label class="control-label" for="username">Last Name</label>
+					<div class="controls">
+						<input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+					</div>
+				</div>
+				<div class="control-group">
+					<!-- E-mail -->
+					<label class="control-label" for="email">E-mail</label>
+					<div class="controls">
+						<input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+						<p class="help-block">Please provide your E-mail</p>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<!-- Password-->
+					<label class="control-label" for="password">Password</label>
+					<div class="controls">
+						<input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+						<p class="help-block">Password should be at least 4 characters</p>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<!-- Password -->
+					<label class="control-label" for="password_confirm">Password (Confirm)</label>
+					<div class="controls">
+						<input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+						<p class="help-block">Please confirm password</p>
+					</div>
+				</div>
+				<div class="form-check">
+					<!-- Alumni Radio Button-->
+					<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+					<label class="form-check-label" for="defaultCheck1">
+						Alumin </label>
+				</div>
+				<div class="form-check">
+					<!-- Current Student-->
+					<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+					<label class="form-check-label" for="defaultCheck1">
+						Current Student </label>
+				</div>
+				<div class="form-check">
+					<!-- Undergrad-->
+					<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+					<label class="form-check-label" for="defaultCheck1">
+						Undergrad Student </label>
+				</div>
+				<div class="form-row align-items-center">
+					<div class="col-auto my-1">
+						<label class="mr-sm-2" for="inlineFormCustomSelect">Educational Level Undergrad student</label>
+						<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+							<option selected>Choose...</option>
+							<option value="1">Freshman</option>
+							<option value="2">Sophomore</option>
+							<option value="3">Junior</option>
+							<option value="3">Senior</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-row align-items-center">
+					<div class="col-auto my-1">
+						<label class="mr-sm-2" for="inlineFormCustomSelect">Educational Level Undergrad student</label>
+						<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+							<option selected>Choose...</option>
+							<option value="1">MA</option>
+							<option value="2">MBA</option>
+							<option value="3">PhD</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+		<!--
+				Todo: Create a form with the following fields:
+					1. Name Text Field
+					2. Email Text Field
+					3. Password Text Field
+					4. Password Confirmation Text Field
+					5. Email Text Field
+					6. CU Boulder Alumni Radio Button
+					7. CU Boulder Student Radio Button
+					8. CU Boulder Undergrad/Grad Radio Button
+					9. Undergraduate Select (Freshman-Senior)
+					10. Graduate Select (MA, MBA, PhD)
+					11. Submit Button (links to home page)
+
+			-->
+		<input type="submit" value="Register" class="btn btn-primary btn-block">
+		</form>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	 crossorigin="anonymous"></script>
+</body>
+
+</html>
