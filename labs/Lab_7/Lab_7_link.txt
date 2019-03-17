@@ -1,2 +1,2 @@
 Coovi Meha
-Link: 
+Link: https://github.com/CooviM/software_dev_methods/tree/master/labs/Lab_7
