@@ -219,6 +219,16 @@
 					choice: choices,
 					played: ''
 				});
+			})
+			.catch(function (error) {
+				// display error message in case an error
+				request.flash('error', err);
+				response.render('pages/home', {
+					title: 'Home Page',
+					data: '',
+					color: '',
+					color_msg: ''
+				});
 			});
 
 	});
@@ -264,16 +274,16 @@
 					played: row[2]
 				});
 			})
-		// .catch(function (error) {
-		// 	// display error message in case an error
-		// 	request.flash('error', err);
-		// 	response.render('pages/home', {
-		// 		my_title: "Players information",
-		// 		players: '',
-		// 		choice: '',
-		// 		player: ''
-		// 	});
-		// });
+			.catch(function (error) {
+				// display error message in case an error
+				request.flash('error', err);
+				response.render('pages/home', {
+					title: 'Home Page',
+					data: '',
+					color: '',
+					color_msg: ''
+				});
+			});
 
 	});
 
