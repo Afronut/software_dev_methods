@@ -166,6 +166,7 @@ function loadPlayersPage() {
 		} else if (key == 3) {
 			anchor.setAttribute("onclick", "switchPlayers(3)");
 		}
+
 		anchor.innerHTML = players[key].name;
 		myDrop.appendChild(anchor);
 		line = document.createElement('br');

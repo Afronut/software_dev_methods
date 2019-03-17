@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../HW1/mypage.css">
+    <title>About me</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Coovi, Meha - <span class="h3 text-muted">Mechanical and Software Engineer</span></h1>
+        <p>I am from west Africa, Benin and Mechanical Engineer with minor in computer
+            science at CU Boulder. I can speak 5 languages and write in more than 5 computer
+            languages. I believe that basics knowledge computer science languages
+            should be a requirement for every engineer because of the evolution of technology.
+        </p>
+        <h2>My Professional Profile</h2>
+        <button type="button" class=" btn btn-light"><a href="Link: https://github.com/CooviM">Coovi's GitHub</a></button>
+        <p></p>
+        <img src="../HW1/IMG_1088.JPG" alt="Coovi Meha" height="200px" width="150px">
+        <h3>My Favorite Project</h3>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Project Name</th>
+                    <th scope="col">Technologies Used</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RoboTitan2.0</td>
+                    <td>
+                        <ul>
+                            <li>Python</li>
+                            <li>Html, CSS, Javascript, Flask, sql </li>
+                            <li>Senors, Motors, camera</li>
+                            <li>BeagleBone</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Robot Forklift</td>
+                    <td>
+                        <ul>
+                            <li>RaspberryPi, Arduino</li>
+                            <li>Python</li>
+                            <li>c++</li>
+                            <li>Senors, Motors, Camera</li>
+                        </ul>
+                    </td>
+                </tr>
+        </table>
+        <p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false"
+                aria-controls="multiCollapseExample1">Country Traveled to</a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2"
+                aria-expanded="false" aria-controls="multiCollapseExample2">Interests</button>
+        </p>
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                        <ul>
+                            <li>USA</li>
+                            <li>Togo</li>
+                            <li>Nigeria</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                        <ol>
+                            <li>Coding</li>
+                            <li>Soccer</li>
+                            <li>Traveling</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>Country Traveled to</h3>
+        <ul>
+            <li>USA</li>
+            <li>Togo</li>
+            <li>Nigeria</li>
+        </ul>
+        <h3>Interests</h3>
+        <ol>
+            <li>Coding</li>
+            <li>Soccer</li>
+            <li>Traveling</li>
+        </ol>
+        </tbody>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</html>

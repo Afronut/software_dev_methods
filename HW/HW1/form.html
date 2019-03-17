@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend> My Form</legend>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nickname</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter Nickname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                        required>
+                </div>
+                <p>Gender</p>
+                <div class="form-check">
+                    <p>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Male
+                        </label>
+                    </p>
+                    <p>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Female
+                        </label>
+                    </p>
+                    <p>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Other
+                        </label>
+                    </p>
+                    <p>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Prefer not to say
+                        </label>
+                    </p>
+                </div>
+                <p>Security Question</p>
+                <select class="selectpicker show-tick">
+                    <option selected>What is your favorite type of pet</option>
+                    <option value="1">What is your favorite sharing service</option>
+                    <option value="2">Where do you want to work after you finish education</option>
+                </select>
+                <p> <strong>Answer</strong></p>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Security Answer">
+                <br>
+                <p><strong>Favorite Programming Languages</strong></p>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">C/C++</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Java</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">Javascript</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">Python</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">Go</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">C#</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">PHP</label>
+                </div>
+                <br>
+                <p><strong>Additional Information</strong></p>
+                <p>About Me</p>
+                <div class="md-form">
+                    <textarea type="text" id="form7" class="md-textarea form-control" rows="3"></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+            <br>
+        </fieldset>
+
+    </div>
+</body>
+
+</html>
