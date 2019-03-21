@@ -8,7 +8,7 @@ So please sight sources if you took help from any online resource.
 
 
 //IDs for all the table elements. You get the cell element just by using document.getElementById("A1")
-var table_ids = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"]
+var table_ids = ["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3"];
 
 /*
 An integer array of length 9. 
@@ -19,7 +19,7 @@ Similarly, A move by player 2(who is O) at Cell 'A3' --- The board_state[2] will
 We store the move of player 1 as '1' and player 2 as '0'. So after the above two moves the state should look like
 [1, -1, 0, -1, -1, -1, -1, -1, -1]
 */
-var board_state = [-1,-1,-1,-1,-1,-1,-1,-1,-1]
+var board_state = [-1, -1, -1, -1, -1, -1, -1, -1, -1]
 
 
 // A flag to keep track of the status of the game, false means the game is not started. The default value is set to false
@@ -30,7 +30,7 @@ A variable to keep track of each players turn. Since the game always starts with
 1 means player_1
 0 means player_0
 */
-var turn = 1 
+var turn = 1
 
 /*
  @Return boolean
@@ -47,7 +47,7 @@ turn = 1 is for player_1 and
 turn = 0 is for player_2
 @Param - No param
 */
-function whose_move(){
+function whose_move() {
 	return this.turn
 }
 
@@ -71,7 +71,8 @@ false means the game has not started
 When the game has not started the flag is set to false. As soon as the game starts the flag must be set to true.
 Once the game has finished or user has clicked on reset_play the flag must be set to false.
 */
-function game_started(){
+function game_started() {
+	started = true;
 	return this.started
 }
 
@@ -87,8 +88,27 @@ The method should do all the validations as stated in rule 1.
 5. Once game has started, Handle multiple clicks on begin play.
 */
 
-function begin_play(){
-
+function begin_play() {
+	if (($('#player1_id').val() == '')) {
+		alert('Please fill payer1 name');
+		return;
+	} else if (($('#player2_id').val() == '')) {
+		alert('Please fill payer2 name');
+		return;
+	} else if (started == false) {
+		game_started();
+		var p1 = $('#player1_id').val();
+		var p2 = $('#player2_id').val()
+		$('#player1_id').val(p1 + '(X)');
+		$('#player2_id').val(p2 + '(O)');
+		$("#player2_id").prop('disabled', true);
+		$("#player1_id").prop('disabled', true);
+		p1 = $('#player1_id').val();
+		$("#turn_info").html('Turn for: ' + "<strong>" + p1.charAt(p1.length - 2) + "</strong>");
+		return;
+	} else {
+		alert("Already stated, please reset_play to restart");
+	}
 }
 
 /*
@@ -102,8 +122,20 @@ The method should do all the things as stated in rule 2.
 Remember to set the strated flag as false
 
 */
-function reset_play(){
-
+function reset_play() {
+	var p1 = $('#player1_id').val();
+	var p2 = $('#player2_id').val()
+	$('#player1_id').val('');
+	$('#player2_id').val('');
+	$("#player2_id").prop('disabled', false);
+	$("#player1_id").prop('disabled', false);
+	p1 = $('#player1_id').val();
+	$("#turn_info").html('Game has not begin.');
+	for (i = 0; i < table_ids.length; i++) {
+		$("#" + table_ids[i]).html(table_ids[i]);
+	}
+	started = false;
+	return;
 }
 
 /*
@@ -123,14 +155,52 @@ The method should do all the things as stated in rule 2.
 
 */
 function play() {
-	
+	move = $('#move_text_id').val();
+	winning = [
+		["A1", "A2", "A3"],
+		["B1", "B2", "B3"],
+		["C1", "C2", "C3"],
+		["A1", "B2", "C3"],
+		["C1", "B2", "C3"]
+	];
+	if (started == false) {
+		alert("Game has not stated");
+		return;
+	} else if (started == true && !table_ids.includes(move)) {
+		alert("invalid move!!");
+		return;
+	} else if (started == true && table_ids.includes(move)) {
+		var p1 = $('#player1_id').val();
+		var p2 = $('#player2_id').val();
+		if (turn == 1) {
+			$("#" + move).html(p1.charAt(p1.length - 2));
+			$("#turn_info").html('Turn for: ' + "<strong>" + p2.charAt(p2.length - 2) + "</strong>");
+			turn = 2;
+		} else if (turn == 2) {
+			$("#" + move).html(p2.charAt(p2.length - 2));
+			$("#turn_info").html('Turn for: ' + "<strong>" + p1.charAt(p1.length - 2) + "</strong>");
+			turn = 1;
+		}
+		for (i = 0; i < winning.length; i++) {
+			var s1 = $('#' + winning[i][0]).html();
+			var s2 = $('#' + winning[i][1]).html();
+			var s3 = $('#' + winning[i][2]).html();
+			if (s1 == s2 && s1 == s3) {
+				alert("Winner: " + s1);
+				reset_play();
+				return;
+			}
+		}
+
+	}
+
 }
 
 /*
 Do not change this method.
 */
-function moveEnter(event) {		
-	if(event.keyCode == 13) {
+function moveEnter(event) {
+	if (event.keyCode == 13) {
 		event.preventDefault()
 		play()
 	}
